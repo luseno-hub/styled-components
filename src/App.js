@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { GlobalStyle } from "./components/styles/GlobalStyle.style";
+import HeroSection from "./components/HeroSection";
+import { Button } from "./components/styles/Button.style";
+import { Container } from "./components/styles/Container.style";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <HeroSection />
+      <Container>
+        <h1>Brand</h1>
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Pages</li>
+            <li>Contact Us</li>
+          </ul>
+        </nav>
+        <Button>Seventy Seven</Button>
+      </Container>
+    </>
   );
 }
 
